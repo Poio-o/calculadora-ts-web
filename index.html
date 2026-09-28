@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Miguel Trujillo Rojas">
+  <title>Calculadora Web</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Calculadora Web</h1>
+
+  <div class="calculator">
+    <input type="number" id="num1" placeholder="Primer número">
+    <input type="number" id="num2" placeholder="Segundo número">
+
+    <div class="buttons">
+      <button onclick="calcular('sumar')">+</button>
+      <button onclick="calcular('restar')">-</button>
+      <button onclick="calcular('multiplicar')">*</button>
+      <button onclick="calcular('dividir')">/</button>
+    </div>
+
+    <h2 id="resultado">El resultado es: </h2>
+  </div>
+
+  <script type="module" src="dist/index.js"></script>
+</body>
+</html>

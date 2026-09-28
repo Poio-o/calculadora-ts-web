@@ -1,0 +1,37 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 50px;
+  background-color: #f4f4f9;
+}
+
+.calculator {
+  display: inline-block;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+input {
+  display: block;
+  margin: 10px auto;
+  padding: 8px;
+  font-size: 16px;
+  width: 200px;
+}
+
+.buttons {
+  margin: 15px 0;
+}
+
+button {
+  font-size: 18px;
+  padding: 10px 15px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+#resultado {
+  color: #333;
+}
