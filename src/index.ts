@@ -1,3 +1,6 @@
+import { interval } from "rxjs";
+import { dateTimestampProvider } from "rxjs/internal/scheduler/dateTimestampProvider";
+
 class Calculadora {
   private id: number;
   private contenedorPadre: HTMLElement;
@@ -89,8 +92,10 @@ class Calculadora {
 const contenedorGrid = document.getElementById("calculadoras-grid") as HTMLElement;
 
 if (contenedorGrid) {
-  const cantidadDeseada = 4;
+  const cantidadDeseada = 7;
   for (let i = 1; i <= cantidadDeseada; i++) {
     new Calculadora(i, contenedorGrid);
   }
 }
+
+
