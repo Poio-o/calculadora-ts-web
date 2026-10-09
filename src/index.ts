@@ -1,5 +1,5 @@
-import { interval } from "rxjs";
-import { dateTimestampProvider } from "rxjs/internal/scheduler/dateTimestampProvider";
+import { Clock } from "./clock";
+import { Cronometro } from "./cronometro";
 
 class Calculadora {
   private id: number;
@@ -89,13 +89,22 @@ class Calculadora {
   }
 }
 
+// Inicialización unificada en el Grid
 const contenedorGrid = document.getElementById("calculadoras-grid") as HTMLElement;
 
 if (contenedorGrid) {
-  const cantidadDeseada = 7;
-  for (let i = 1; i <= cantidadDeseada; i++) {
+  // Instanciamos 2 Relojes
+  for (let i = 1; i <= 2; i++) { 
+    new Clock(i, contenedorGrid);
+  }
+
+  // Instanciamos 2 Cronómetros
+  for (let i = 1; i <= 2; i++) {
+    new Cronometro(i, contenedorGrid);
+  }
+
+  // Instanciamos 3 Calculadoras (Para rellenar los 7 elementos que tenías configurados)
+  for (let i = 1; i <= 3; i++) {
     new Calculadora(i, contenedorGrid);
   }
 }
-
-

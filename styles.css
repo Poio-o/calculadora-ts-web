@@ -38,7 +38,10 @@ header {
   margin: 0 auto;
 }
 
-.calc-card {
+/* ==========================================
+   ESTILOS COMPARTIDOS Y CALCULADORA
+   ========================================== */
+.calc-card, .reloj-card, .crono-card {
   background: white;
   border-radius: 8px;
   padding: 20px;
@@ -48,7 +51,11 @@ header {
   gap: 10px;
 }
 
-.calc-card h3 {
+.calc-card {
+  border-top: 4px solid #007bff;
+}
+
+.calc-card h3, .reloj-card h3, .crono-card h3 {
   text-align: center;
   color: #333;
 }
@@ -87,4 +94,76 @@ header {
   font-weight: bold;
   text-align: center;
   color: #333;
+}
+
+/* ==========================================
+   ESTILOS NUEVOS: RELOJ Y CRONÓMETRO
+   ========================================== */
+.reloj-card {
+  border-top: 4px solid #28a745; /* Verde para el reloj */
+}
+
+.crono-card {
+  border-top: 4px solid #ffc107; /* Amarillo/Dorado para el cronómetro */
+}
+
+.display-tiempo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  font-family: monospace;
+  text-align: center;
+  margin: 15px 0;
+  color: #222;
+  letter-spacing: 1px;
+}
+
+.botones-control {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+}
+
+.botones-control button {
+  flex: 1;
+  padding: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  border: 1px solid #6c757d;
+  background-color: white;
+  color: #495057;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.botones-control button:hover:not(:disabled) {
+  background-color: #6c757d;
+  color: white;
+}
+
+.botones-control button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  background-color: #e9ecef;
+  border-color: #dee2e6;
+  color: #6c757d;
+}
+
+.crono-config {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+.crono-modo, .crono-input-segundos {
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.crono-input-segundos {
+  width: 90px;
+  text-align: center;
 }
